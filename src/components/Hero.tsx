@@ -46,14 +46,14 @@ export const Hero = () => {
             </div>
 
             <h1 className="hero-text text-balance">
-              Gelirinizi
+              Sadakat Programınızla
               <span className="block bg-clip-text text-transparent bg-gradient-to-r from-[hsl(14_88%_55%)] via-[hsl(25_95%_53%)] to-[hsl(35_90%_60%)]">
-                %35 Artırın Akıllı Sadakat ile
+                Gelirinizi %35 Artırın
               </span>
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl text-balance">
-              İlk kez gelen ziyaretçileri sadık müşterilere dönüştürün. Müşteri sadakatini artırmak ve tekrar iş yapmayı sağlamak için her şey bir arada platform.
+              Tek seferlik müşteriyi sadık müşteriye dönüştürün. Restoranınız için özel tasarlanmış sadakat programı.
             </p>
           </motion.div>
 

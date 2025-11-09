@@ -35,9 +35,9 @@ export const CTA = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              Müşteri Sadakatinizi
+              Müşterilerinizin
               <span className="block mt-2">
-                Dönüştürmeye Hazır mısınız?
+                Tekrar Gelmesini Sağlayın
               </span>
             </motion.h2>
 
@@ -47,7 +47,7 @@ export const CTA = () => {
               animate={{ opacity: 0.9, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
             >
-              Akıllı sadakat ile %35 daha fazla gelir elde edin. Bugün 30 günlük ücretsiz denemenizi başlatın.
+              Sadakat programıyla cirosunuzu %35 artırın. 30 gün ücretsiz deneyin, beğenirseniz devam edin.
             </motion.p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

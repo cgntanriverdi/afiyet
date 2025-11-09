@@ -9,7 +9,7 @@ export const Footer = () => {
           </div>
 
           <p className="text-muted-foreground max-w-md">
-            Müşteri sadakatini artırmak ve tekrar iş yapmayı sağlamak için her şey bir arada platform.
+            Restoranlar için sadakat programı. Müşterileriniz tekrar gelsin, cirosunuz artsın.
           </p>
 
           <div className="flex gap-4">

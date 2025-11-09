@@ -7,26 +7,26 @@ export const Benefits = () => {
   const benefits = [
     {
       icon: Zap,
-      title: "24 Saatte Başlatın",
-      description: "Karmaşık kurulum veya eğitim gerektirmez. Tam markalı sadakat programınızla bir günde yayına alın",
+      title: "24 Saatte Hazır",
+      description: "Kurulum yok, eğitim yok. Markanıza özel sadakat programınız bugün başlasın, yarın kazandırsın",
       color: "from-yellow-500 to-orange-500"
     },
     {
       icon: Sparkles,
-      title: "Tekrar Ziyaretleri Artırın",
-      description: "Veriler, sadakat üyelerinin %35 daha sık ziyaret ettiğini gösteriyor. Ara sıra gelen müşterileri düzenli müşterilere dönüştürün",
+      title: "Müşteriler Daha Sık Gelir",
+      description: "Sadakat programı kullanan restoranlar %35 daha fazla müşteri ziyareti görüyor. Tek seferlik müşterileriniz düzenli gelir",
       color: "from-purple-500 to-pink-500"
     },
     {
       icon: Check,
-      title: "Birleşik Kontrol Paneli",
-      description: "Tüm müşteri davranışlarını, ödül kullanımlarını ve yatırım getirisini tek bir güçlü analiz panosunda takip edin",
+      title: "Her Şey Bir Yerde",
+      description: "Müşteri davranışları, ödül kullanımı, gelir analizi - hepsi tek panelde. Rakamları görün, kararları verin",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Shield,
-      title: "Kurumsal Güvenlik",
-      description: "Banka düzeyinde şifreleme ve GDPR uyumluluğu. Müşteri verileriniz korunur ve tamamen size aittir",
+      title: "Güvenli ve Uyumlu",
+      description: "Banka seviyesinde güvenlik, GDPR uyumluluğu. Müşteri verileri tamamen sizde, kimseyle paylaşılmaz",
       color: "from-green-500 to-emerald-500"
     }
   ];
@@ -48,12 +48,12 @@ export const Benefits = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
           <h2 className="section-title mb-6">
-            Neden <span className="bg-clip-text text-transparent bg-gradient-to-r from-[hsl(14_88%_55%)] via-[hsl(25_95%_53%)] to-[hsl(35_90%_60%)]">
-              Lider Restoranlar
-            </span> Bizi Tercih Ediyor
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[hsl(14_88%_55%)] via-[hsl(25_95%_53%)] to-[hsl(35_90%_60%)]">
+              Başarılı Restoranlar
+            </span> Neden Afiyet'i Seçiyor
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            İlk günden itibaren ölçülebilir sonuçlar sağlayan eksiksiz sadakat çözümü
+            Bugün başlayın, ilk haftadan sonuç görün
           </p>
         </div>
 
