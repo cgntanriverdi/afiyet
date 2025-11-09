@@ -69,8 +69,7 @@ export const CTA = () => {
               >
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="text-lg px-8 py-6 border-2 border-white text-white hover:bg-white/10 transition-all w-full sm:w-auto"
+                  className="text-lg px-8 py-6 bg-white text-[hsl(14_88%_55%)] hover:bg-white/90 transition-all w-full sm:w-auto shadow-2xl"
                 >
                   Görüşme Ayarlayın
                 </Button>
