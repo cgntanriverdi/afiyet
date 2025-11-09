@@ -8,23 +8,23 @@ export const Solution = () => {
   const steps = [
     {
       icon: Map,
-      title: "Programınızı Özelleştirin",
-      description: "Sezgisel platformumuzla sadakat seviyelerinizi, ödüllerinizi ve markanızı dakikalar içinde tasarlayın"
+      title: "Programınızı Tasarlayın",
+      description: "Seviyeler, ödüller, marka - hepsini dakikalar içinde ayarlayın. Hiçbir teknik bilgi gerekmez"
     },
     {
       icon: QrCode,
-      title: "Sorunsuz Entegrasyon",
-      description: "Mevcut POS sisteminizle entegre olun veya QR kod çözümümüzü kullanın - donanım gerekmez"
+      title: "Hemen Başlayın",
+      description: "POS entegrasyonu veya QR kod - siz seçin. Ekstra donanım almaya gerek yok"
     },
     {
       icon: Trophy,
-      title: "Gerçek Zamanlı Veri Takibi",
-      description: "Canlı analitik ile müşteri etkileşimini, ödül kullanım oranlarını ve gelir etkisini izleyin"
+      title: "Canlı Takip Edin",
+      description: "Hangi müşteri ne kadar harcadı, hangi ödül popüler, gelir nasıl arttı - anlık görün"
     },
     {
       icon: Gift,
-      title: "Büyümeyi Hızlandırın",
-      description: "Müşteriler ödüller ve özel teklifler için daha sık döndükçe elde tutma oranlarının yükselişini izleyin"
+      title: "Büyümeyi İzleyin",
+      description: "Müşteriler daha sık gelmeye başlıyor, cirosunuz artıyor. Rakamlar konuşuyor"
     }
   ];
 
@@ -45,13 +45,12 @@ export const Solution = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
           <h2 className="section-title mb-6">
-            Kurulumdan Başarıya
-            <span className="block mt-2"><span className="bg-clip-text text-transparent bg-gradient-to-r from-[hsl(14_88%_55%)] via-[hsl(25_95%_53%)] to-[hsl(35_90%_60%)]">
-              4 Basit Adımda
-            </span></span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[hsl(14_88%_55%)] via-[hsl(25_95%_53%)] to-[hsl(35_90%_60%)]">
+              4 Adımda
+            </span> Başlayın, Sonuç Alın
           </h2>
           <p className="text-2xl text-muted-foreground max-w-3xl mx-auto font-medium">
-            Sadakat programınızı başlatın ve 24 saat içinde sonuçları görmeye başlayın
+            Bugün başla, yarın ilk sadık müşterini kazan
           </p>
         </div>
 
