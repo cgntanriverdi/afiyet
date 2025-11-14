@@ -19,38 +19,38 @@ export const Gamification = () => {
   const features = [
     {
       icon: Star,
-      title: "Restoran Puanları",
+      title: "Her Ziyaret Puan Yağmuru",
       items: [
-        "Her ziyarette otomatik puan kazanın",
-        "Restorana özel ödüller biriktirin",
-        "Ücretsiz yemek ve indirimler kazanın"
+        "QR kod okut, otomatik puan kazan - basit",
+        "Restorana özel seviye sistemi ile özel ayrıcalıklar",
+        "Bronze'dan Platinum'a - her seviyede farklı hediyeler"
       ]
     },
     {
       icon: Zap,
-      title: "Süreklilik Bonusu",
+      title: "Streak Sistemi ile Turbo Puan",
       items: [
-        "Düzenli ziyaretlerle ekstra puan",
-        "Haftalık kazanç bonusları",
-        "Özel sadakat ödülleri"
+        "Haftada 3 kez gel, puanlar 2x olsun",
+        "Sürekli müşterilere özel VIP indirimler",
+        "En sadık müşteri sen ol, en büyük ödüller senin"
       ]
     },
     {
       icon: Target,
-      title: "Keşif Avantajları",
+      title: "Yeni Keşiflerde Bonus Fırtınası",
       items: [
-        "Yeni restoranları deneyin, 2x puan kazanın",
-        "İlk ziyaretlerde özel bonuslar",
-        "Arkadaş davet bonusu"
+        "Yeni restoran dene, ilk ziyarette 3x puan",
+        "\"İlk 50 müşteri\" kampanyalarına özel avantajlar",
+        "Arkadaşını getir, sen de o da kazansın"
       ]
     },
     {
       icon: Award,
-      title: "Görev Sistemi",
+      title: "Challenge Sistemi",
       items: [
-        "Haftalık görevleri tamamlayın",
-        "Özel etkinliklere katılın",
-        "Ekstra ödüller kazanın"
+        "Haftalık görevler: \"5 farklı restoran ziyaret et\"",
+        "Aylık özel etkinlikler ve yarışmalar",
+        "Leaderboard'da zirveye çık, ekstra ödüller kap"
       ]
     }
   ];
@@ -65,11 +65,13 @@ export const Gamification = () => {
           transition={{ duration: 0.8, ease: [0.4, 0.0, 0.2, 1] }}
         >
           <h2 className="section-title mb-6">
-            <span className="gradient-text">Oyunlaştırma</span> ile
-            <span className="block mt-2">Her Ziyaret Kazandırır</span>
+            Müşterileriniz Gelmek İçin
+            <span className="block mt-2">
+              <span className="gradient-text">Yarışacak</span>
+            </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Seviye atlayın, ödüller kazanın, deneyiminizi maksimize edin
+            Oyun gibi: Puan kazan, level atla, ödül topla - McDonald's App'ten esinlendi
           </p>
         </motion.div>
 
