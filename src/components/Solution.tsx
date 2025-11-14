@@ -8,23 +8,23 @@ export const Solution = () => {
   const steps = [
     {
       icon: Map,
-      title: "Kampanyalarınızı Kurun",
-      description: "Kaç puan toplanınca ne ödül verilecek? Hangi indirimler olacak? Hepsini dakikalar içinde ayarlayın, kod yazmaya gerek yok"
+      title: "Kampanyalarınızı Tasarlayın",
+      description: "\"3 kahve al, 1 bedava\" veya \"500 puan = Ücretsiz pasta\". Kendi kurallarınızı siz belirleyin. Teknik bilgi? Sıfır."
     },
     {
       icon: QrCode,
-      title: "QR Kod Koyun, Başlayın",
-      description: "Kasanıza, masalarınıza QR kod yerleştirin. Müşteriler okutup puan toplasın. Ekstra donanım gerektirmez"
+      title: "QR Kodu Yapıştırın",
+      description: "McApp gibi: Masa üstü, kasa önü, vitrin - istediğiniz yere QR kodu koyun. Müşteriler okutup puan toplamaya başlasın. Ekstra cihaz yok."
     },
     {
       icon: Trophy,
-      title: "Sonuçları Görebilirsiniz",
-      description: "Kaç müşteri topladınız? Hangi kampanya işe yarıyor? Ciroya etkisi ne? Hepsini canlı izleyin"
+      title: "Canlı Sonuçları İzleyin",
+      description: "Hangi kampanya patladı? Kaç müşteri geldi? Ciroya etkisi kaç lira? Gerçek zamanlı dashboard'da her şeyi görün."
     },
     {
       icon: Gift,
-      title: "Müşterileri Tekrar Getirin",
-      description: "Gelmeyen müşterilere özel kampanya gönderin. Puan sistemi onları tekrar getirir"
+      title: "Kaybettiğiniz Müşteriyi Geri Getirin",
+      description: "2 hafta gelmedi mi? Özel kampanyayla SMS gönderin. Puan sistemi onları geri getirir - garanti."
     }
   ];
 
@@ -45,15 +45,15 @@ export const Solution = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
           <h2 className="section-title mb-6">
-            24 saat içinde
+            Yarın Açılışta
             <span className="block mt-2">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[hsl(14_88%_55%)] via-[hsl(25_95%_53%)] to-[hsl(35_90%_60%)]">
-                başlayın
+                Hazır Olun
               </span>
             </span>
           </h2>
           <p className="text-2xl text-muted-foreground max-w-3xl mx-auto font-medium">
-            Kurulum kolay, teknik bilgi gerektirmez
+            Kurulum 24 saat, öğrenme 5 dakika, sonuç ömür boyu
           </p>
         </div>
 

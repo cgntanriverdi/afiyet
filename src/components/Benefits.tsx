@@ -7,26 +7,26 @@ export const Benefits = () => {
   const benefits = [
     {
       icon: Zap,
-      title: "Komisyon Ödemekten Kurtulun",
-      description: "Paket servis uygulamalarına %30-40 ödemek yerine sabit aylık ücret ödeyin. İster 100, ister 10,000 müşteri olsun fiyat aynı",
+      title: "Her Siparişten %40 Kesinti Bitsin",
+      description: "Getir ve Yemeksepeti'ne ödediğiniz dev komisyonları bırakın. Sabit aylık ücret, ister 100 ister 10,000 sipariş - hep aynı fiyat",
       color: "from-yellow-500 to-orange-500"
     },
     {
       icon: Sparkles,
-      title: "Müşteriler Mekana Gelsin",
-      description: "Kampanyalar ve özel indirimlerle müşterileri restoranınıza çağırın. Restoranlar ortalama %35 daha fazla ziyaret görüyor",
+      title: "Masaları Doldurun, Kârı Katlayın",
+      description: "Özel kampanya ve fırsatlarla müşterileri doğrudan restoranınıza çekin. Paket servis yerine dine-in - daha yüksek ortalama hesap, daha fazla kazanç",
       color: "from-purple-500 to-pink-500"
     },
     {
       icon: Check,
-      title: "Müşteriler Tekrar Gelsin",
-      description: "Puan topla, seviye atla, ödül kazan sistemi ile müşteriler sürekli geri gelir. Müşteri bağlılığı 2.5 kat artıyor",
+      title: "Sadık Müşteri Ordusu Yaratın",
+      description: "McDonald's tarzı QR kod ve puan sistemiyle müşterileriniz tekrar tekrar gelsin. Her ziyarette puan, her puan yeni bir ziyaret",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Shield,
-      title: "Müşteri Verileriniz Size Ait",
-      description: "Müşterilerinizin telefon numaraları, siparişleri, tercihleri sizde kalıyor. Başka platformlara bağımlı değilsiniz",
+      title: "Müşteri Datası Artık Sizin",
+      description: "Müşteri bilgileri, sipariş geçmişi, tercihler - hepsi sizde. Platformlara bağımlılığa son, müşteri sahipliğine merhaba",
       color: "from-green-500 to-emerald-500"
     }
   ];
@@ -48,13 +48,13 @@ export const Benefits = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
           <h2 className="section-title mb-6">
-            Neden
+            Restoranınızın Kontrolü
             <span className="block bg-clip-text text-transparent bg-gradient-to-r from-[hsl(14_88%_55%)] via-[hsl(25_95%_53%)] to-[hsl(35_90%_60%)]">
-              Afiyet?
+              Artık Sizde
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Daha az masraf, daha fazla müşteri, daha çok kazanç
+            Komisyonlar gitsin, kârlar artsın, müşteriler sizin olsun
           </p>
         </div>
 

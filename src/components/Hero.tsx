@@ -41,19 +41,19 @@ export const Hero = () => {
           >
             <div className="inline-block">
               <span className="text-sm font-semibold tracking-wider uppercase text-accent">
-                Müşteri Kampanyaları ve Puan Sistemi
+                Restoranlar İçin Komisyonsuz Müşteri Platformu
               </span>
             </div>
 
             <h1 className="hero-text text-balance">
-              Müşterilerinizi Geri Getirin,
+              %40 Komisyonlara Son.
               <span className="block bg-clip-text text-transparent bg-gradient-to-r from-[hsl(14_88%_55%)] via-[hsl(25_95%_53%)] to-[hsl(35_90%_60%)]">
-                Komisyon Ödemeyin
+                Müşteriler Artık Sizin.
               </span>
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl text-balance">
-              Paket servis uygulamalarına %30-40 komisyon vermek yerine, kendi kampanya ve puan sisteminizi kurun. Müşterileriniz mekana gelsin, siz daha çok kazanın.
+              Getir ve Yemeksepeti'ne verdiğiniz komisyonları kesin. QR kod ve kampanya sistemiyle müşterilerinizi doğrudan restoranınıza çekin. Sabit aylık ücret, sınırsız kazanç.
             </p>
           </motion.div>
 
