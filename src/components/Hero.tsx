@@ -53,7 +53,7 @@ export const Hero = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl text-balance">
-              Getir ve Yemeksepeti'ne verdiğiniz komisyonları kesin. QR kod ve kampanya sistemiyle müşterilerinizi doğrudan restoranınıza çekin. Sabit aylık ücret, sınırsız kazanç.
+              Yüksek komisyonlu online sipariş platformlarına alternatif. QR kod ve kupon sistemiyle mekanda yeme kültürünü canlandırın, komisyonsuz müşteri trafiği sağlayın.
             </p>
           </motion.div>
 

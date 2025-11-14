@@ -14,7 +14,7 @@ export const Solution = () => {
     {
       icon: QrCode,
       title: "QR Kodu Yapıştırın",
-      description: "McApp gibi: Masa üstü, kasa önü, vitrin - istediğiniz yere QR kodu koyun. Müşteriler okutup puan toplamaya başlasın. Ekstra cihaz yok."
+      description: "Masa üstü, kasa önü, vitrin - istediğiniz yere QR kodu koyun. Müşteriler okutup puan toplamaya başlasın. Ekstra cihaz veya donanım yok."
     },
     {
       icon: Trophy,

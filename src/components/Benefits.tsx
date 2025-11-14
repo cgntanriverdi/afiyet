@@ -8,7 +8,7 @@ export const Benefits = () => {
     {
       icon: Zap,
       title: "Her Siparişten %40 Kesinti Bitsin",
-      description: "Getir ve Yemeksepeti'ne ödediğiniz dev komisyonları bırakın. Sabit aylık ücret, ister 100 ister 10,000 sipariş - hep aynı fiyat",
+      description: "Online sipariş platformlarına ödediğiniz dev komisyonları bırakın. Sabit aylık abonelik, ister 100 ister 10,000 müşteri - hep aynı fiyat",
       color: "from-yellow-500 to-orange-500"
     },
     {
@@ -20,7 +20,7 @@ export const Benefits = () => {
     {
       icon: Check,
       title: "Sadık Müşteri Ordusu Yaratın",
-      description: "McDonald's tarzı QR kod ve puan sistemiyle müşterileriniz tekrar tekrar gelsin. Her ziyarette puan, her puan yeni bir ziyaret",
+      description: "Kanıtlanmış QR kod ve puan sistemiyle müşterileriniz tekrar tekrar gelsin. Her ziyarette puan, her puan yeni bir ziyaret",
       color: "from-blue-500 to-cyan-500"
     },
     {
