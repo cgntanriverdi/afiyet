@@ -1,11 +1,12 @@
+import logo from "@/assets/Logo.PNG";
+
 export const Footer = () => {
   return (
     <footer className="py-16 bg-background border-t border-border">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center justify-center text-center space-y-6">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[hsl(14_88%_55%)] to-[hsl(25_95%_53%)]" />
-            <span className="text-2xl font-bold">Afiyet</span>
+            <img src={logo} alt="Afiyet" className="h-10 w-auto" />
           </div>
 
           <p className="text-muted-foreground max-w-md">

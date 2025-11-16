@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { easing } from "@/lib/animations";
+import logo from "@/assets/Logo.PNG";
 
 export const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -42,7 +43,7 @@ export const Navigation = () => {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
         >
-          <img src="/Logo.PNG" alt="Afiyet" className="h-8 w-auto" />
+          <img src={logo} alt="Afiyet" className="h-8 w-auto" />
         </motion.div>
 
         <div className="hidden md:flex items-center gap-8">
