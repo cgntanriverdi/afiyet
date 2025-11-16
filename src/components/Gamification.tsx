@@ -71,7 +71,7 @@ export const Gamification = () => {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Oyun gibi: Puan kazan, level atla, ödül topla - McDonald's App'ten esinlendi
+            Oyun gibi: Puan kazan, level atla, ödül topla - başarılı sadakat programlarından esinlendi
           </p>
         </motion.div>
 

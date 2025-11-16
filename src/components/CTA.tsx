@@ -47,7 +47,7 @@ export const CTA = () => {
               animate={{ opacity: 0.9, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
             >
-              Bu ay Getir'e ödediğiniz komisyonu hesaplayın. Sonra 30 gün Afiyet'i ücretsiz deneyin. Fark kendinize gelsin.
+              Bu ay paket servis platformlarına ödediğiniz komisyonu hesaplayın. Sonra 30 gün Afiyet'i ücretsiz deneyin. Fark kendinize gelsin.
             </motion.p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

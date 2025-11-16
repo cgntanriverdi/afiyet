@@ -8,7 +8,7 @@ export const Benefits = () => {
     {
       icon: Zap,
       title: "Her Siparişten %40 Kesinti Bitsin",
-      description: "Getir ve Yemeksepeti'ne ödediğiniz dev komisyonları bırakın. Sabit aylık ücret, ister 100 ister 10,000 sipariş - hep aynı fiyat",
+      description: "Paket servis platformlarına ödediğiniz dev komisyonları bırakın. Sabit aylık ücret, ister 100 ister 10,000 sipariş - hep aynı fiyat",
       color: "from-yellow-500 to-orange-500"
     },
     {
