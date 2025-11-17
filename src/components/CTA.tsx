@@ -1,56 +1,105 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ctaReveal, sectionTransition } from "@/lib/animations";
+import { useRef } from "react";
 
 export const CTA = () => {
-  return (
-    <section className="relative py-32 overflow-hidden" id="download">
-      {/* Static background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-red-50/50 via-orange-50/30 to-yellow-50/50" />
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
 
-      {/* Static orb */}
-      <div
+  // Parallax effects for final reveal
+  const backgroundY = useTransform(scrollYProgress, [0, 1], [0, -30]);
+  const orbScale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1.1, 0.9]);
+  const orbOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.15, 0.25, 0.2]);
+
+  return (
+    <section ref={ref} className="relative py-32 overflow-hidden" id="download">
+      {/* Parallax background */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-b from-red-50/50 via-orange-50/30 to-yellow-50/50"
+        style={{ y: backgroundY }}
+      />
+
+      {/* Animated orb with parallax */}
+      <motion.div
         className="absolute top-10 left-10 w-[400px] h-[400px] rounded-full"
         style={{
           background: 'radial-gradient(circle, hsl(14 88% 55% / 0.2), transparent 70%)',
           filter: 'blur(60px)',
+          scale: orbScale,
+          opacity: orbOpacity,
         }}
       />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           className="relative rounded-3xl overflow-hidden"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          whileHover={{ scale: 1.02 }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={ctaReveal}
+          whileHover={{ scale: 1.02, y: -10 }}
+          transition={{ type: "spring", stiffness: 150, damping: 20 }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(14_88%_55%)] via-[hsl(25_95%_53%)] to-[hsl(35_90%_60%)]" />
+          {/* Animated gradient background */}
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-r from-[hsl(14_88%_55%)] via-[hsl(25_95%_53%)] to-[hsl(35_90%_60%)]"
+            animate={{
+              backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            style={{
+              backgroundSize: "200% 200%",
+            }}
+          />
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iYSIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNDUpIj48cGF0aCBkPSJNLS4wMyAzMGgxMHYxMGgtMTB6TTIwIDIwaDEwdjEwaC0xMHoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjA1Ii8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+')] opacity-50" />
 
           <div className="relative z-10 py-20 px-8 md:px-16 text-center text-white">
             <motion.h2
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={sectionTransition}
+              custom={0}
             >
               Komisyonlara Veda Edin.
-              <span className="block mt-2">
+              <motion.span
+                className="block mt-2"
+                variants={sectionTransition}
+                custom={1}
+              >
                 Müşterilerinize Merhaba.
-              </span>
+              </motion.span>
             </motion.h2>
 
             <motion.p
               className="text-xl md:text-2xl mb-10 opacity-90 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 0.9, y: 0 }}
-              transition={{ duration: 1, delay: 0.2 }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={sectionTransition}
+              custom={2}
             >
               Paket servis platformlarına ödediğiniz komisyonları hesaplayın. Afiyet ile sabit aylık abonelik modeline geçin ve kârlılığınızı artırın.
             </motion.p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={sectionTransition}
+              custom={3}
+            >
               <motion.div
                 whileHover={{ scale: 1.1, y: -5 }}
                 whileTap={{ scale: 0.95 }}
@@ -77,7 +126,7 @@ export const CTA = () => {
                   </a>
                 </Button>
               </motion.div>
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>

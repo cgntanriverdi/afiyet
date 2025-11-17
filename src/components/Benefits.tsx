@@ -1,8 +1,22 @@
 import { Card } from "@/components/ui/card";
 import { Check, Shield, Sparkles, Zap } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { benefitsContainer, benefitCard, sectionTransition } from "@/lib/animations";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useRef } from "react";
 
 export const Benefits = () => {
+  const ref = useRef<HTMLElement>(null);
+  const { isVisible } = useScrollAnimation(0.2);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  // Scroll-based parallax for background elements
+  const orbY = useTransform(scrollYProgress, [0, 1], [-50, 50]);
+  const orbScale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1, 0.8]);
 
   const benefits = [
     {
@@ -32,21 +46,35 @@ export const Benefits = () => {
   ];
 
   return (
-    <section className="relative py-32 overflow-hidden" id="benefits">
-      {/* Static background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-orange-50/50 via-red-50/30 to-yellow-50/50" />
+    <section ref={ref} className="relative py-32 overflow-hidden" id="benefits">
+      {/* Parallax background */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-b from-orange-50/50 via-red-50/30 to-yellow-50/50"
+        style={{
+          y: useTransform(scrollYProgress, [0, 1], [0, -30]),
+        }}
+      />
 
-      {/* Static gradient orb */}
-      <div
+      {/* Parallax gradient orb with scale animation */}
+      <motion.div
         className="absolute top-20 right-20 w-[500px] h-[500px] rounded-full"
         style={{
           background: 'radial-gradient(circle, hsl(14 88% 55% / 0.15), transparent 70%)',
           filter: 'blur(60px)',
+          y: orbY,
+          scale: orbScale,
         }}
       />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-20">
+        {/* Section header with reveal animation */}
+        <motion.div
+          className="text-center mb-20"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={sectionTransition}
+        >
           <h2 className="section-title mb-6">
             Restoranınızın Kontrolü
             <span className="block bg-clip-text text-transparent bg-gradient-to-r from-[hsl(14_88%_55%)] via-[hsl(25_95%_53%)] to-[hsl(35_90%_60%)]">
@@ -56,43 +84,55 @@ export const Benefits = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Komisyonsuz iş modeliyle kârlılığınızı artırın, müşteri ilişkilerinizi güçlendirin.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Cards with staggered 3D reveal */}
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={benefitsContainer}
+        >
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
+              variants={benefitCard}
               whileHover={{
                 scale: 1.05,
                 rotateY: 5,
                 rotateX: 5,
                 transition: { duration: 0.3 }
               }}
-              style={{ perspective: 1000 }}
+              style={{
+                perspective: 1000,
+                transformStyle: "preserve-3d",
+              }}
             >
               <Card className="p-8 text-center glass-effect h-full relative overflow-hidden">
-                {/* Static gradient overlay */}
+                {/* Gradient overlay */}
                 <div
-                  className="absolute inset-0 opacity-0 hover:opacity-10 transition-opacity"
+                  className="absolute inset-0 opacity-0 hover:opacity-10 transition-opacity duration-500"
                   style={{
                     background: `linear-gradient(135deg, ${benefit.color.replace('from-', 'hsl(var(--')}, ${benefit.color.replace('to-', 'hsl(var(--')})`,
                   }}
                 />
+
+                {/* Icon with rotation on hover */}
                 <motion.div
                   className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${benefit.color} mx-auto mb-6 flex items-center justify-center relative z-10`}
-                  whileHover={{ scale: 1.2, rotate: 180 }}
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 15 }}
                 >
                   <benefit.icon className="w-8 h-8 text-white" />
                 </motion.div>
+
                 <h3 className="text-xl font-bold mb-3 relative z-10">{benefit.title}</h3>
                 <p className="text-muted-foreground relative z-10">{benefit.description}</p>
               </Card>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
