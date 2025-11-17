@@ -123,6 +123,24 @@ export default {
             transform: "translateX(0)",
           },
         },
+        "gradient-shift": {
+          "0%, 100%": {
+            backgroundPosition: "0% 50%",
+          },
+          "50%": {
+            backgroundPosition: "100% 50%",
+          },
+        },
+        "gradient-pulse": {
+          "0%, 100%": {
+            opacity: "0.6",
+            transform: "scale(1)",
+          },
+          "50%": {
+            opacity: "0.8",
+            transform: "scale(1.05)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -131,6 +149,10 @@ export default {
         "scale-in": "scale-in 0.6s ease-out",
         "slide-left": "slide-left 0.8s ease-out",
         "slide-right": "slide-right 0.8s ease-out",
+        "gradient-shift": "gradient-shift 15s ease-in-out infinite",
+        "gradient-pulse": "gradient-pulse 8s ease-in-out infinite",
+        "gradient-pulse-delayed": "gradient-pulse 10s ease-in-out infinite 2s",
+        "gradient-pulse-slow": "gradient-pulse 12s ease-in-out infinite 4s",
       },
     },
   },

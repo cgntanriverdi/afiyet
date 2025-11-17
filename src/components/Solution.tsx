@@ -39,12 +39,10 @@ export const Solution = () => {
             transition={{ duration: 1 }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[hsl(14_88%_55%)] via-[hsl(25_95%_53%)] to-[hsl(35_90%_60%)] blur-3xl opacity-20 rounded-3xl" />
-            <motion.img
+            <img
               src={qrCodeScreen}
               alt="Afiyet Restoran Listesi - Müşteri Uygulaması"
-              className="relative w-full h-auto rounded-3xl shadow-2xl"
-              whileHover={{ scale: 1.02, rotate: 1 }}
-              transition={{ duration: 0.4 }}
+              className="relative w-full h-auto rounded-3xl shadow-2xl transition-transform duration-300 ease-out hover:scale-[1.02] will-change-transform"
             />
           </motion.div>
           <div className="space-y-6">
@@ -118,12 +116,10 @@ export const Solution = () => {
             transition={{ duration: 1 }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[hsl(14_88%_55%)] via-[hsl(25_95%_53%)] to-[hsl(35_90%_60%)] blur-3xl opacity-20 rounded-3xl" />
-            <motion.img
+            <img
               src={restaurantList}
               alt="Afiyet QR Kod - Fırsat Kullanımı"
-              className="relative w-full h-auto rounded-3xl shadow-2xl"
-              whileHover={{ scale: 1.02, rotate: -1 }}
-              transition={{ duration: 0.4 }}
+              className="relative w-full h-auto rounded-3xl shadow-2xl transition-transform duration-300 ease-out hover:scale-[1.02] will-change-transform"
             />
           </motion.div>
         </div>
@@ -137,12 +133,10 @@ export const Solution = () => {
             transition={{ duration: 1 }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[hsl(14_88%_55%)] via-[hsl(25_95%_53%)] to-[hsl(35_90%_60%)] blur-3xl opacity-20 rounded-3xl" />
-            <motion.img
+            <img
               src={couponVerification}
               alt="Afiyet Kupon Doğrulama - Restoran Paneli"
-              className="relative w-full h-auto rounded-3xl shadow-2xl"
-              whileHover={{ scale: 1.02, rotate: 1 }}
-              transition={{ duration: 0.4 }}
+              className="relative w-full h-auto rounded-3xl shadow-2xl transition-transform duration-300 ease-out hover:scale-[1.02] will-change-transform"
             />
           </motion.div>
           <div className="space-y-6">
@@ -182,12 +176,10 @@ export const Solution = () => {
             transition={{ duration: 1 }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[hsl(14_88%_55%)] via-[hsl(25_95%_53%)] to-[hsl(35_90%_60%)] blur-3xl opacity-20 rounded-3xl" />
-            <motion.img
+            <img
               src={restaurantPanel}
               alt="Afiyet Restoran Paneli - Kampanya Yönetimi"
-              className="relative w-full h-auto rounded-3xl shadow-2xl"
-              whileHover={{ scale: 1.02, rotate: 1 }}
-              transition={{ duration: 0.4 }}
+              className="relative w-full h-auto rounded-3xl shadow-2xl transition-transform duration-300 ease-out hover:scale-[1.02] will-change-transform"
             />
           </motion.div>
           <div className="space-y-6">

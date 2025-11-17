@@ -4,26 +4,30 @@ import { easing } from "@/lib/animations";
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Static gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50" />
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 animate-gradient-shift bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50"
+        style={{
+          backgroundSize: '200% 200%',
+        }}
+      />
 
-      {/* Static gradient orbs */}
+      {/* Animated gradient orbs */}
       <div
-        className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full"
+        className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full animate-gradient-pulse"
         style={{
           background: 'radial-gradient(circle, hsl(14 88% 55% / 0.2), transparent 70%)',
           filter: 'blur(80px)',
         }}
       />
       <div
-        className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full"
+        className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full animate-gradient-pulse-delayed"
         style={{
           background: 'radial-gradient(circle, hsl(25 95% 53% / 0.2), transparent 70%)',
           filter: 'blur(80px)',
         }}
       />
       <div
-        className="absolute top-1/2 left-1/2 w-[700px] h-[700px] rounded-full"
+        className="absolute top-1/2 left-1/2 w-[700px] h-[700px] rounded-full animate-gradient-pulse-slow"
         style={{
           background: 'radial-gradient(circle, hsl(35 90% 60% / 0.15), transparent 70%)',
           filter: 'blur(100px)',
