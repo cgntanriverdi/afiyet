@@ -104,9 +104,13 @@ export const Hero = () => {
         <motion.div
           className="text-center space-y-8 max-w-4xl mx-auto"
           style={{
-            y: textY,
-            scale: textScale,
-            opacity: textOpacity,
+            y: shouldReduceAnimations ? 0 : textY,
+            scale: shouldReduceAnimations ? 1 : textScale,
+            opacity: shouldReduceAnimations ? 1 : textOpacity,
+            transform: shouldReduceAnimations ? 'none' : undefined,
+            willChange: shouldReduceAnimations ? 'auto' : 'transform',
+            WebkitFontSmoothing: 'antialiased',
+            MozOsxFontSmoothing: 'grayscale',
           }}
         >
           {/* Hero title with delayed reveal */}
@@ -126,6 +130,11 @@ export const Hero = () => {
             animate="visible"
             variants={optimizedHeroTextReveal}
             transition={{ delay: shouldReduceAnimations ? 0.1 : 0.3 }}
+            style={{
+              WebkitFontSmoothing: 'antialiased',
+              MozOsxFontSmoothing: 'grayscale',
+              textRendering: 'optimizeLegibility',
+            }}
           >
             Müşteriler Artık Sizin.
           </motion.p>
@@ -137,6 +146,11 @@ export const Hero = () => {
             animate="visible"
             variants={optimizedHeroTextReveal}
             transition={{ delay: shouldReduceAnimations ? 0.2 : 0.6 }}
+            style={{
+              WebkitFontSmoothing: 'antialiased',
+              MozOsxFontSmoothing: 'grayscale',
+              textRendering: 'optimizeLegibility',
+            }}
           >
             Online sipariş platformlarına ödediğiniz yüksek komisyonları sonlandırın. QR kod ve kampanya sistemiyle müşterilerinizi doğrudan restoranınıza yönlendirin.
           </motion.p>
