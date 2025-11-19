@@ -100,7 +100,7 @@ export const CTA = () => {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex justify-center"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -113,23 +113,12 @@ export const CTA = () => {
               >
                 <Button
                   size="lg"
-                  className="text-lg px-8 py-6 bg-white text-[hsl(14_88%_55%)] hover:bg-white/90 transition-all w-full sm:w-auto shadow-2xl"
-                >
-                  Ücretsiz Deneyin
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </motion.div>
-              <motion.div
-                whileHover={shouldReduceAnimations ? undefined : { scale: 1.1, y: -5 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button
-                  size="lg"
-                  className="text-lg px-8 py-6 bg-white text-[hsl(14_88%_55%)] hover:bg-white/90 transition-all w-full sm:w-auto shadow-2xl"
+                  className="text-lg px-8 py-6 bg-white text-[hsl(14_88%_55%)] hover:bg-white/90 transition-all shadow-2xl"
                   asChild
                 >
                   <a href="mailto:afiyetapp@outlook.com?subject=Afiyet Hakkında Bilgi Almak İstiyorum&body=Merhaba,%0D%0A%0D%0AAfiyet hakkında daha fazla bilgi almak istiyorum.">
                     Bize Ulaşın
+                    <ArrowRight className="ml-2 w-5 h-5" />
                   </a>
                 </Button>
               </motion.div>
