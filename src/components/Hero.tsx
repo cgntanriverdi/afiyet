@@ -101,82 +101,59 @@ export const Hero = () => {
       )}
 
       <div className="container mx-auto px-6 py-32 relative z-10">
-        <motion.div
-          className="text-center space-y-8 max-w-4xl mx-auto"
-          style={{
-            y: shouldReduceAnimations ? 0 : textY,
-            scale: shouldReduceAnimations ? 1 : textScale,
-            opacity: shouldReduceAnimations ? 1 : textOpacity,
-            transform: shouldReduceAnimations ? 'none' : undefined,
-            willChange: shouldReduceAnimations ? 'auto' : 'transform',
-            WebkitFontSmoothing: 'antialiased',
-            MozOsxFontSmoothing: 'grayscale',
-          }}
-        >
-          {/* Hero title with delayed reveal */}
-          <motion.h1
-            className="hero-text text-[hsl(14_88%_55%)]"
-            initial={shouldReduceAnimations ? { opacity: 0, y: 30, scale: 0.95 } : "hidden"}
-            animate={shouldReduceAnimations ? { opacity: 1, y: 0, scale: 1 } : "visible"}
-            variants={shouldReduceAnimations ? undefined : optimizedHeroReveal}
-            transition={shouldReduceAnimations ? { duration: 0.6, ease: easing.apple } : undefined}
+        {shouldReduceAnimations ? (
+          // MOBILE: Plain HTML, no animations at all
+          <div className="text-center space-y-8 max-w-4xl mx-auto">
+            <h1 className="hero-text text-[hsl(14_88%_55%)]">
+              Afiyet
+            </h1>
+            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8">
+              Müşteriler Artık Sizin.
+            </p>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto text-balance">
+              Online sipariş platformlarına ödediğiniz yüksek komisyonları sonlandırın. QR kod ve kampanya sistemiyle müşterilerinizi doğrudan restoranınıza yönlendirin.
+            </p>
+          </div>
+        ) : (
+          // DESKTOP: Full animations
+          <motion.div
+            className="text-center space-y-8 max-w-4xl mx-auto"
             style={{
-              WebkitFontSmoothing: 'antialiased',
-              MozOsxFontSmoothing: 'grayscale',
-              textRendering: 'optimizeLegibility',
-              transform: shouldReduceAnimations ? 'translateZ(0)' : undefined,
-              backfaceVisibility: 'hidden',
+              y: textY,
+              scale: textScale,
+              opacity: textOpacity,
             }}
           >
-            Afiyet
-          </motion.h1>
+            <motion.h1
+              className="hero-text text-[hsl(14_88%_55%)]"
+              initial="hidden"
+              animate="visible"
+              variants={optimizedHeroReveal}
+            >
+              Afiyet
+            </motion.h1>
 
-          {/* Main headline with blur reveal effect */}
-          <motion.p
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8"
-            initial={shouldReduceAnimations ? { opacity: 0, y: 20 } : "hidden"}
-            animate={shouldReduceAnimations ? { opacity: 1, y: 0 } : "visible"}
-            variants={shouldReduceAnimations ? undefined : optimizedHeroTextReveal}
-            transition={{
-              delay: shouldReduceAnimations ? 0.1 : 0.3,
-              duration: shouldReduceAnimations ? 0.5 : 1,
-              ease: easing.apple
-            }}
-            style={{
-              WebkitFontSmoothing: 'antialiased',
-              MozOsxFontSmoothing: 'grayscale',
-              textRendering: 'optimizeLegibility',
-              transform: shouldReduceAnimations ? 'translateZ(0)' : undefined,
-              backfaceVisibility: 'hidden',
-              perspective: 1000,
-            }}
-          >
-            Müşteriler Artık Sizin.
-          </motion.p>
+            <motion.p
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8"
+              initial="hidden"
+              animate="visible"
+              variants={optimizedHeroTextReveal}
+              transition={{ delay: 0.3 }}
+            >
+              Müşteriler Artık Sizin.
+            </motion.p>
 
-          {/* Description with staggered reveal */}
-          <motion.p
-            className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto text-balance"
-            initial={shouldReduceAnimations ? { opacity: 0, y: 20 } : "hidden"}
-            animate={shouldReduceAnimations ? { opacity: 1, y: 0 } : "visible"}
-            variants={shouldReduceAnimations ? undefined : optimizedHeroTextReveal}
-            transition={{
-              delay: shouldReduceAnimations ? 0.2 : 0.6,
-              duration: shouldReduceAnimations ? 0.5 : 1,
-              ease: easing.apple
-            }}
-            style={{
-              WebkitFontSmoothing: 'antialiased',
-              MozOsxFontSmoothing: 'grayscale',
-              textRendering: 'optimizeLegibility',
-              transform: shouldReduceAnimations ? 'translateZ(0)' : undefined,
-              backfaceVisibility: 'hidden',
-              perspective: 1000,
-            }}
-          >
-            Online sipariş platformlarına ödediğiniz yüksek komisyonları sonlandırın. QR kod ve kampanya sistemiyle müşterilerinizi doğrudan restoranınıza yönlendirin.
-          </motion.p>
-        </motion.div>
+            <motion.p
+              className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto text-balance"
+              initial="hidden"
+              animate="visible"
+              variants={optimizedHeroTextReveal}
+              transition={{ delay: 0.6 }}
+            >
+              Online sipariş platformlarına ödediğiniz yüksek komisyonları sonlandırın. QR kod ve kampanya sistemiyle müşterilerinizi doğrudan restoranınıza yönlendirin.
+            </motion.p>
+          </motion.div>
+        )}
       </div>
     </section>
   );
