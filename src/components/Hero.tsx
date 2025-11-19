@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { getMobileOptimizedVariant, heroReveal, heroTextReveal } from "@/lib/animations";
+import { getMobileOptimizedVariant, heroReveal, heroTextReveal, easing } from "@/lib/animations";
 import { useRef, useMemo } from "react";
 import { useResize } from "@/contexts/ResizeContext";
 
